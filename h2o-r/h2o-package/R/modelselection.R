@@ -70,9 +70,9 @@
 #' @param objective_epsilon Converge if  objective value changes less than this. Default indicates: If lambda_search is set to True the
 #'        value of objective_epsilon is set to .0001. If the lambda_search is set to False and lambda is equal to zero,
 #'        the value of objective_epsilon is set to .000001, for any other value of lambda the default value of
-#'        objective_epsilon is set to .0001. Defaults to 0.
+#'        objective_epsilon is set to .0001. Defaults to -1.
 #' @param beta_epsilon Converge if  beta changes less (using L-infinity norm) than beta esilon, ONLY applies to IRLSM solver
-#'        Defaults to 0.
+#'        Defaults to -1.
 #' @param gradient_epsilon Converge if  objective changes less (using L-infinity norm) than this, ONLY applies to L-BFGS solver. Default
 #'        indicates: If lambda_search is set to False and lambda is equal to zero, the default value of gradient_epsilon
 #'        is equal to .000001, otherwise the default value is .0001. If lambda_search is set to True, the conditional
@@ -163,8 +163,8 @@ h2o.modelSelection <- function(x,
                                intercept = FALSE,
                                non_negative = FALSE,
                                max_iterations = 0,
-                               objective_epsilon = 0,
-                               beta_epsilon = 0,
+                               objective_epsilon = -1,
+                               beta_epsilon = -1,
                                gradient_epsilon = 0,
                                startval = NULL,
                                prior = 0,
@@ -351,8 +351,8 @@ h2o.modelSelection <- function(x,
                                                intercept = FALSE,
                                                non_negative = FALSE,
                                                max_iterations = 0,
-                                               objective_epsilon = 0,
-                                               beta_epsilon = 0,
+                                               objective_epsilon = -1,
+                                               beta_epsilon = -1,
                                                gradient_epsilon = 0,
                                                startval = NULL,
                                                prior = 0,
